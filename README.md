@@ -1,24 +1,28 @@
-# Module Develop Template
+# Unfold json
 
-This project is just using for develop module quickly.
+This module is used to show `json` on website.
 
 ## Use
 
-- Install:
 ```
-  npm install -i
+  import UnfoldJson from 'unfold-json';
+
+  let data = {"key":"value","items":[{"key":"value"},{"key":"value"}]}
+  document.getElementById("data").innerHTML = UnfoldJson(JSON.stringify(data));
+```
+and you can show this json on your website like this:
+```
+  {
+      "key": "value",
+      "items": [
+          {
+              "key": "value"
+          },
+          {
+              "key": "value"
+          }
+      ]
+  }
 ```
 
-- Update:
-```
-  npm update --save
-```
-
-- Then, you need to remove `.git` and change to your repo.
-- Reset `npm`(you need to remove `repository` in `package.json`, first).
-```
-  npm init
-```
-
-- You jsut add your file in `src`.
-- `npm run build` will build file to `lib`.
+I use`es6`, but you can also use `require` to import module.
